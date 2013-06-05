@@ -7,7 +7,7 @@ class GitApi {
     Pattern branchNameFilter = null
 
     public List<String> getBranchNames() {
-        String command = "git ls-remote --heads ${gitUrl}"
+        String command = "/usr/local/git/bin/git ls-remote --heads ${gitUrl}"
         List<String> branchNames = []
 
         eachResultLine(command) { String line ->
