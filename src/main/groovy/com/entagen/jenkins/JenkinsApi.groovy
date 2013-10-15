@@ -59,7 +59,7 @@ class JenkinsApi {
         post('createItem', missingJobConfig, [name: missingJob.jobName, mode: 'copy', from: templateJob.jobName], ContentType.XML)
 
         post('job/' + missingJob.jobName + "/config.xml", missingJobConfig, [:], ContentType.XML)
-        sleep 10
+        sleep 10000
         post('job/' + missingJob.jobName + "/config.xml", missingJobConfig, [:], ContentType.XML)
     }
 
